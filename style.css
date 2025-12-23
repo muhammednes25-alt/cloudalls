@@ -1,0 +1,112 @@
+/* CLOUDALLS PREMIUM STYLESHEET - VISUAL UPGRADE */
+
+/* 1. IMPORT MODERN FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+:root {
+    --brand-brown: #2d241e;
+    --brand-accent: #fd7e14; /* Orange Pop */
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.6);
+    --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.08);
+    --gradient-text: linear-gradient(45deg, #2d241e, #fd7e14);
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Modern Font */
+    color: #444;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+/* 2. CUSTOM SCROLLBAR (Very Professional Detail) */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: var(--brand-brown); border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: var(--brand-accent); }
+
+/* 3. GLOWING NAVBAR */
+.navbar {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px); /* Frosted Glass Effect */
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 15px 0;
+}
+.navbar-brand { font-weight: 800; letter-spacing: -1px; color: var(--brand-brown) !important; }
+
+/* 4. EXPENSIVE HERO SECTION */
+.hero-section {
+    background: radial-gradient(circle at top right, #fff5eb, #f8f9fa, #eef2f5);
+    padding: 120px 0 80px 0;
+    position: relative;
+}
+
+/* Gradient Text Effect */
+.hero-title {
+    font-weight: 800;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+/* 5. GLASSMORPHISM CARDS */
+.service-card, .card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid white;
+    border-radius: 16px; /* Smoother corners */
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy hover */
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+    border-color: var(--brand-accent);
+}
+
+/* 6. GLOWING BUTTONS */
+.btn-cloudalls {
+    background: var(--brand-brown);
+    color: white;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(45, 36, 30, 0.2);
+    border: none;
+    transition: 0.3s;
+}
+.btn-cloudalls:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(253, 126, 20, 0.4); /* Orange Glow */
+    background: var(--brand-accent);
+    color: white;
+}
+
+/* 7. ANIMATIONS & UTILS */
+.reveal { opacity: 0; transform: translateY(40px); transition: 1s all ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* Typewriter Cursor */
+#typewriter-text { 
+    border-bottom: 4px solid var(--brand-accent); 
+    color: var(--brand-brown);
+}
+
+/* Footer */
+footer { background: #1a1512; color: #aaa; padding: 60px 0 30px; }
+footer a { color: #fff; text-decoration: none; opacity: 0.7; }
+footer a:hover { opacity: 1; color: var(--brand-accent); }
+
+/* Back to Top */
+#back-to-top {
+    position: fixed; bottom: 30px; right: 30px;
+    background: white; color: var(--brand-brown);
+    width: 50px; height: 50px; border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    text-align: center; line-height: 50px; font-size: 20px;
+    opacity: 0; transition: 0.4s; z-index: 1000;
+}
+#back-to-top.visible { opacity: 1; transform: translateY(0); }
+#back-to-top:hover { background: var(--brand-accent); color: white; transform: rotate(360deg); }
